@@ -1,53 +1,7 @@
 {
-  "home": {
-    "home-hero": "/images/hero-mother-child.jpg",
-    "home-service-1": "/images/clinic-detail-2.jpg",
-    "home-service-2": "/images/treatment-room-1.jpg",
-    "home-service-3": "/images/clinic-detail-1.jpg",
-    "home-service-4": "/images/clinic-detail-3.jpg",
-    "home-service-5": "/images/doctor-consulting.jpg",
-    "home-service-6": "/images/equipment-lab.jpg",
-    "home-about": "/images/dr-hesami-chin.jpg",
-    "home-tech": "/images/doctor-consulting.jpg",
-    "home-team-1": "/images/doctor-portrait-studio.jpg",
-    "home-team-2": "/images/doctors-duo.jpg",
-    "home-team-3": "/images/team-member-1.jpg",
-    "home-team-4": "/images/team-member-2.jpg",
-    "home-cta": "/images/clinic-wide.jpg"
-  },
-  "about": {
-    "about-hero": "/images/clinic-interior-1.jpg",
-    "about-story": "/images/doctor-portrait-clinic.jpg",
-    "about-philosophy": "/images/team-meeting.jpg",
-    "about-gallery-1": "/images/clinic-interior-1.jpg",
-    "about-gallery-2": "/images/treatment-room-1.jpg",
-    "about-gallery-3": "/images/clinic-interior-2.jpg",
-    "about-gallery-4": "/images/equipment-lab.jpg",
-    "about-cta": "/images/clinic-wide.jpg"
-  },
-  "team": {
-    "team-hero": "/images/team-photo.jpg",
-    "team-dr-hesami": "/images/doctor-portrait-studio.jpg",
-    "team-dr-kassem": "/images/doctors-duo.jpg",
-    "team-naual": "/images/team-member-1.jpg",
-    "team-evy": "/images/team-member-2.jpg",
-    "team-shreya": "/images/team-member-1.jpg",
-    "team-group": "/images/team-group-2.jpg",
-    "team-cta": "/images/clinic-wide.jpg"
-  },
-  "treatments": {
-    "treatments-hero": "/images/treatment-procedure.jpg",
-    "treatments-aligners": "/images/doctor-scrubs.jpg",
-    "treatments-braces": "/images/treatment-room-1.jpg",
-    "treatments-lingual": "/images/clinic-detail-1.jpg",
-    "treatments-retainers": "/images/clinic-detail-3.jpg",
-    "treatments-cta": "/images/clinic-wide.jpg"
-  },
-  "aligners": {
-    "aligners-hero": "/images/doctor-scrubs.jpg",
-    "aligners-intro": "/images/doctor-portrait-clinic.jpg",
-    "aligners-candidate": "/images/doctor-consulting.jpg",
-    "aligners-cta": "/images/clinic-wide.jpg"
+  "contact": {
+    "contact-hero": "/images/clinic-interior-1.jpg",
+    "contact-cta": "/images/clinic-wide.jpg"
   },
   "braces": {
     "braces-hero": "/images/treatment-procedure.jpg",
@@ -56,41 +10,11 @@
     "braces-expect": "/images/doctor-consulting.jpg",
     "braces-cta": "/images/clinic-wide.jpg"
   },
-  "technology": {
-    "tech-hero": "/images/doctor-consulting.jpg",
-    "tech-scanning": "/images/doctor-consulting.jpg",
-    "tech-planning": "/images/clinic-detail-1.jpg",
-    "tech-printing": "/images/equipment-lab.jpg",
-    "tech-benefits": "/images/treatment-room-1.jpg",
-    "tech-cta": "/images/clinic-wide.jpg"
-  },
-  "gallery": {
-    "gallery-hero": "/images/clinic-interior-1.jpg",
-    "gallery-1": "/images/clinic-interior-1.jpg",
-    "gallery-2": "/images/doctor-portrait-studio.jpg",
-    "gallery-3": "/images/treatment-room-1.jpg",
-    "gallery-4": "/images/clinic-detail-1.jpg",
-    "gallery-5": "/images/doctors-duo.jpg",
-    "gallery-6": "/images/clinic-interior-2.jpg",
-    "gallery-7": "/images/equipment-lab.jpg",
-    "gallery-8": "/images/team-member-1.jpg",
-    "gallery-9": "/images/doctor-consulting.jpg",
-    "gallery-10": "/images/doctor-portrait-clinic.jpg",
-    "gallery-11": "/images/clinic-detail-2.jpg",
-    "gallery-12": "/images/team-member-2.jpg",
-    "gallery-13": "/images/treatment-procedure.jpg",
-    "gallery-14": "/images/clinic-detail-3.jpg",
-    "gallery-15": "/images/doctors-seated.jpg",
-    "gallery-16": "/images/team-meeting.jpg",
-    "gallery-17": "/images/hero-reception.jpg",
-    "gallery-18": "/images/clinic-wide.jpg",
-    "gallery-19": "/images/team-photo.jpg",
-    "gallery-20": "/images/doctor-consulting-2.jpg",
-    "gallery-cta": "/images/clinic-wide.jpg"
-  },
-  "faq": {
-    "faq-hero": "/images/doctor-portrait-clinic.jpg",
-    "faq-cta": "/images/clinic-wide.jpg"
+  "aligners": {
+    "aligners-hero": "/images/doctor-scrubs.jpg",
+    "aligners-intro": "/images/doctor-portrait-clinic.jpg",
+    "aligners-candidate": "/images/doctor-consulting.jpg",
+    "aligners-cta": "/images/clinic-wide.jpg"
   },
   "blog": {
     "blog-hero": "/images/doctor-scrubs.jpg",
@@ -102,8 +26,84 @@
     "blog-article-6": "/images/equipment-lab.jpg",
     "blog-cta": "/images/clinic-wide.jpg"
   },
-  "contact": {
-    "contact-hero": "/images/clinic-interior-1.jpg",
-    "contact-cta": "/images/clinic-wide.jpg"
+  "technology": {
+    "tech-hero": "/images/doctor-consulting.jpg",
+    "tech-scanning": "/images/doctor-consulting.jpg",
+    "tech-planning": "/images/clinic-detail-1.jpg",
+    "tech-printing": "/images/equipment-lab.jpg",
+    "tech-benefits": "/images/treatment-room-1.jpg",
+    "tech-cta": "/images/clinic-wide.jpg"
+  },
+  "about": {
+    "about-hero": "/images/clinic-interior-1.jpg",
+    "about-story": "/images/doctor-portrait-clinic.jpg",
+    "about-philosophy": "/images/team-meeting.jpg",
+    "about-gallery-1": "/images/clinic-interior-1.jpg",
+    "about-gallery-2": "/images/treatment-room-1.jpg",
+    "about-gallery-3": "/images/clinic-interior-2.jpg",
+    "about-gallery-4": "/images/equipment-lab.jpg",
+    "about-cta": "/images/clinic-wide.jpg"
+  },
+  "gallery": {
+    "gallery-16": "/images/team-meeting.jpg",
+    "gallery-17": "/images/hero-reception.jpg",
+    "gallery-18": "/images/clinic-wide.jpg",
+    "gallery-19": "/images/team-photo.jpg",
+    "gallery-cta": "/images/clinic-wide.jpg",
+    "gallery-hero": "/images/clinic-interior-1.jpg",
+    "gallery-1": "/images/clinic-interior-1.jpg",
+    "gallery-2": "/images/doctor-portrait-studio.jpg",
+    "gallery-3": "/images/treatment-room-1.jpg",
+    "gallery-4": "/images/clinic-detail-1.jpg",
+    "gallery-20": "/images/doctor-consulting-2.jpg",
+    "gallery-5": "/images/doctors-duo.jpg",
+    "gallery-10": "/images/hero-mother-child.jpg",
+    "gallery-6": "/images/clinic-interior-2.jpg",
+    "gallery-11": "/images/clinic-detail-2.jpg",
+    "gallery-7": "/images/equipment-lab.jpg",
+    "gallery-12": "/images/team-member-2.jpg",
+    "gallery-8": "/images/team-member-1.jpg",
+    "gallery-13": "/images/treatment-procedure.jpg",
+    "gallery-9": "/images/doctor-consulting.jpg",
+    "gallery-14": "/images/clinic-detail-3.jpg",
+    "gallery-15": "/images/doctors-seated.jpg"
+  },
+  "faq": {
+    "faq-hero": "/images/doctor-portrait-clinic.jpg",
+    "faq-cta": "/images/clinic-wide.jpg"
+  },
+  "treatments": {
+    "treatments-hero": "/images/treatment-procedure.jpg",
+    "treatments-aligners": "/images/doctor-scrubs.jpg",
+    "treatments-braces": "/images/treatment-room-1.jpg",
+    "treatments-lingual": "/images/clinic-detail-1.jpg",
+    "treatments-retainers": "/images/clinic-detail-3.jpg",
+    "treatments-cta": "/images/clinic-wide.jpg"
+  },
+  "team": {
+    "team-hero": "/images/team-photo.jpg",
+    "team-dr-hesami": "/images/doctor-portrait-studio.jpg",
+    "team-dr-kassem": "/images/doctors-duo.jpg",
+    "team-naual": "/images/team-member-1.jpg",
+    "team-evy": "/images/team-member-2.jpg",
+    "team-shreya": "/images/team-member-1.jpg",
+    "team-group": "/images/team-group-2.jpg",
+    "team-cta": "/images/clinic-wide.jpg"
+  },
+  "home": {
+    "home-cta": "/images/clinic-wide.jpg",
+    "home-tech": "/images/doctor-consulting.jpg",
+    "home-hero": "/images/hero-mother-child.jpg",
+    "home-service-1": "/images/clinic-detail-2.jpg",
+    "home-service-2": "/images/treatment-room-1.jpg",
+    "home-service-3": "/images/clinic-detail-1.jpg",
+    "home-service-4": "/images/clinic-detail-3.jpg",
+    "home-team-1": "/images/doctor-portrait-studio.jpg",
+    "home-service-5": "/images/doctor-consulting.jpg",
+    "home-team-2": "/images/doctors-duo.jpg",
+    "home-service-6": "/images/equipment-lab.jpg",
+    "home-team-3": "/images/team-member-1.jpg",
+    "home-team-4": "/images/team-member-2.jpg",
+    "home-about": "/images/dr-hesami-chin.jpg"
   }
 }
