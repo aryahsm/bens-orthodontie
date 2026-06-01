@@ -2,15 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
-# Media / Image uploads
 media_folder: "images"
 public_folder: "/images"
 
-# Logo in admin panel
 site_url: https://bens-orthodontie.netlify.app
-logo_url: https://bens-orthodontie.netlify.app/images/doctor-portrait-studio.jpg
-
-# Locale
 locale: 'en'
 
 collections:
@@ -20,25 +15,24 @@ collections:
   # ═══════════════════════════════════════
   - name: "settings"
     label: "Site Settings"
-    description: "Edit practice info, contact details, and social links"
     files:
       - name: "general"
         label: "Practice Information"
         file: "_data/settings.json"
         fields:
-          - { label: "Practice Name", name: "practiceName", widget: "string", default: "Ben's Orthodontie" }
-          - { label: "Tagline (EN)", name: "taglineEn", widget: "string", default: "Specialist Orthodontic Care in Antwerpen" }
-          - { label: "Tagline (NL)", name: "taglineNl", widget: "string", default: "Specialist Orthodontische Zorg in Antwerpen" }
-          - { label: "Phone Number", name: "phone", widget: "string", default: "+32 3 123 45 67" }
-          - { label: "Email", name: "email", widget: "string", default: "info@bensorthodontie.be" }
-          - { label: "WhatsApp Number", name: "whatsapp", widget: "string", default: "+32412345678" }
+          - { label: "Practice Name", name: "practiceName", widget: "string" }
+          - { label: "Tagline (EN)", name: "taglineEn", widget: "string" }
+          - { label: "Tagline (NL)", name: "taglineNl", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
           - label: "Address"
             name: "address"
             widget: "object"
             fields:
-              - { label: "Street", name: "street", widget: "string", default: "Mechelsesteenweg 271" }
-              - { label: "City", name: "city", widget: "string", default: "2018 Antwerpen" }
-              - { label: "Country", name: "country", widget: "string", default: "Belgium" }
+              - { label: "Street", name: "street", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Country", name: "country", widget: "string" }
           - label: "Opening Hours"
             name: "hours"
             widget: "list"
@@ -51,169 +45,146 @@ collections:
   # ═══════════════════════════════════════
   - name: "photos"
     label: "Photo Manager"
-    description: "Change photos across the entire website"
     files:
-      - name: "photo-config"
-        label: "All Website Photos"
+      - name: "home-photos"
+        label: "Home Page Photos"
         file: "_data/photos.json"
         fields:
-          - label: "Home Page Photos"
+          - label: "Home Page"
             name: "home"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "home-hero", widget: "image", required: false }
-              - { label: "Clear Aligners Card", name: "home-service-1", widget: "image", required: false }
-              - { label: "Traditional Braces Card", name: "home-service-2", widget: "image", required: false }
-              - { label: "Lingual Braces Card", name: "home-service-3", widget: "image", required: false }
-              - { label: "Retainers Card", name: "home-service-4", widget: "image", required: false }
-              - { label: "3D Scanning Card", name: "home-service-5", widget: "image", required: false }
-              - { label: "3D Printing Card", name: "home-service-6", widget: "image", required: false }
-              - { label: "About Section - Doctor", name: "home-about", widget: "image", required: false }
-              - { label: "Technology Preview", name: "home-tech", widget: "image", required: false }
-              - { label: "Team - Dr. Hesami", name: "home-team-1", widget: "image", required: false }
-              - { label: "Team - Dr. Kassem", name: "home-team-2", widget: "image", required: false }
-              - { label: "Team - Naual", name: "home-team-3", widget: "image", required: false }
-              - { label: "Team - Evy", name: "home-team-4", widget: "image", required: false }
-              - { label: "CTA Background", name: "home-cta", widget: "image", required: false }
-
-          - label: "About Page Photos"
+              - { label: "Hero Background", name: "home-hero", widget: "image" }
+              - { label: "Clear Aligners Card", name: "home-service-1", widget: "image" }
+              - { label: "Traditional Braces Card", name: "home-service-2", widget: "image" }
+              - { label: "Lingual Braces Card", name: "home-service-3", widget: "image" }
+              - { label: "Retainers Card", name: "home-service-4", widget: "image" }
+              - { label: "3D Scanning Card", name: "home-service-5", widget: "image" }
+              - { label: "3D Printing Card", name: "home-service-6", widget: "image" }
+              - { label: "About Section Doctor", name: "home-about", widget: "image" }
+              - { label: "Technology Preview", name: "home-tech", widget: "image" }
+              - { label: "Team Dr Hesami", name: "home-team-1", widget: "image" }
+              - { label: "Team Dr Kassem", name: "home-team-2", widget: "image" }
+              - { label: "Team Naual", name: "home-team-3", widget: "image" }
+              - { label: "Team Evy", name: "home-team-4", widget: "image" }
+              - { label: "CTA Background", name: "home-cta", widget: "image" }
+          - label: "About Page"
             name: "about"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "about-hero", widget: "image", required: false }
-              - { label: "Our Story Image", name: "about-story", widget: "image", required: false }
-              - { label: "Philosophy Image", name: "about-philosophy", widget: "image", required: false }
-              - { label: "Gallery Photo 1", name: "about-gallery-1", widget: "image", required: false }
-              - { label: "Gallery Photo 2", name: "about-gallery-2", widget: "image", required: false }
-              - { label: "Gallery Photo 3", name: "about-gallery-3", widget: "image", required: false }
-              - { label: "Gallery Photo 4", name: "about-gallery-4", widget: "image", required: false }
-              - { label: "CTA Background", name: "about-cta", widget: "image", required: false }
-
-          - label: "Team Page Photos"
+              - { label: "Hero Background", name: "about-hero", widget: "image" }
+              - { label: "Our Story Image", name: "about-story", widget: "image" }
+              - { label: "Philosophy Image", name: "about-philosophy", widget: "image" }
+              - { label: "Gallery Photo 1", name: "about-gallery-1", widget: "image" }
+              - { label: "Gallery Photo 2", name: "about-gallery-2", widget: "image" }
+              - { label: "Gallery Photo 3", name: "about-gallery-3", widget: "image" }
+              - { label: "Gallery Photo 4", name: "about-gallery-4", widget: "image" }
+              - { label: "CTA Background", name: "about-cta", widget: "image" }
+          - label: "Team Page"
             name: "team"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero - Group Photo", name: "team-hero", widget: "image", required: false }
-              - { label: "Dr. Hesami Photo", name: "team-dr-hesami", widget: "image", required: false }
-              - { label: "Dr. Kassem Photo", name: "team-dr-kassem", widget: "image", required: false }
-              - { label: "Naual Abbou Photo", name: "team-naual", widget: "image", required: false }
-              - { label: "Evy Moller Photo", name: "team-evy", widget: "image", required: false }
-              - { label: "Shreya Kansara Photo", name: "team-shreya", widget: "image", required: false }
-              - { label: "Full Team Photo", name: "team-group", widget: "image", required: false }
-              - { label: "CTA Background", name: "team-cta", widget: "image", required: false }
-
-          - label: "Treatments Page Photos"
+              - { label: "Hero Group Photo", name: "team-hero", widget: "image" }
+              - { label: "Dr Hesami", name: "team-dr-hesami", widget: "image" }
+              - { label: "Dr Kassem", name: "team-dr-kassem", widget: "image" }
+              - { label: "Naual Abbou", name: "team-naual", widget: "image" }
+              - { label: "Evy Moller", name: "team-evy", widget: "image" }
+              - { label: "Shreya Kansara", name: "team-shreya", widget: "image" }
+              - { label: "Full Team Photo", name: "team-group", widget: "image" }
+              - { label: "CTA Background", name: "team-cta", widget: "image" }
+          - label: "Treatments Page"
             name: "treatments"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "treatments-hero", widget: "image", required: false }
-              - { label: "Clear Aligners Image", name: "treatments-aligners", widget: "image", required: false }
-              - { label: "Braces Image", name: "treatments-braces", widget: "image", required: false }
-              - { label: "Lingual Braces Image", name: "treatments-lingual", widget: "image", required: false }
-              - { label: "Retainers Image", name: "treatments-retainers", widget: "image", required: false }
-              - { label: "CTA Background", name: "treatments-cta", widget: "image", required: false }
-
-          - label: "Clear Aligners Page Photos"
+              - { label: "Hero Background", name: "treatments-hero", widget: "image" }
+              - { label: "Clear Aligners", name: "treatments-aligners", widget: "image" }
+              - { label: "Braces", name: "treatments-braces", widget: "image" }
+              - { label: "Lingual Braces", name: "treatments-lingual", widget: "image" }
+              - { label: "Retainers", name: "treatments-retainers", widget: "image" }
+              - { label: "CTA Background", name: "treatments-cta", widget: "image" }
+          - label: "Clear Aligners Page"
             name: "aligners"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "aligners-hero", widget: "image", required: false }
-              - { label: "Intro Image", name: "aligners-intro", widget: "image", required: false }
-              - { label: "Candidate Image", name: "aligners-candidate", widget: "image", required: false }
-              - { label: "CTA Background", name: "aligners-cta", widget: "image", required: false }
-
-          - label: "Braces Page Photos"
+              - { label: "Hero Background", name: "aligners-hero", widget: "image" }
+              - { label: "Intro Image", name: "aligners-intro", widget: "image" }
+              - { label: "Candidate Image", name: "aligners-candidate", widget: "image" }
+              - { label: "CTA Background", name: "aligners-cta", widget: "image" }
+          - label: "Braces Page"
             name: "braces"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "braces-hero", widget: "image", required: false }
-              - { label: "Intro Image", name: "braces-intro", widget: "image", required: false }
-              - { label: "Types Image", name: "braces-types", widget: "image", required: false }
-              - { label: "What to Expect Image", name: "braces-expect", widget: "image", required: false }
-              - { label: "CTA Background", name: "braces-cta", widget: "image", required: false }
-
-          - label: "Technology Page Photos"
+              - { label: "Hero Background", name: "braces-hero", widget: "image" }
+              - { label: "Intro Image", name: "braces-intro", widget: "image" }
+              - { label: "Types Image", name: "braces-types", widget: "image" }
+              - { label: "What to Expect", name: "braces-expect", widget: "image" }
+              - { label: "CTA Background", name: "braces-cta", widget: "image" }
+          - label: "Technology Page"
             name: "technology"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "tech-hero", widget: "image", required: false }
-              - { label: "3D Scanning Image", name: "tech-scanning", widget: "image", required: false }
-              - { label: "Digital Planning Image", name: "tech-planning", widget: "image", required: false }
-              - { label: "3D Printing Image", name: "tech-printing", widget: "image", required: false }
-              - { label: "Benefits Image", name: "tech-benefits", widget: "image", required: false }
-              - { label: "CTA Background", name: "tech-cta", widget: "image", required: false }
-
-          - label: "Gallery Page Photos"
+              - { label: "Hero Background", name: "tech-hero", widget: "image" }
+              - { label: "3D Scanning", name: "tech-scanning", widget: "image" }
+              - { label: "Digital Planning", name: "tech-planning", widget: "image" }
+              - { label: "3D Printing", name: "tech-printing", widget: "image" }
+              - { label: "Benefits", name: "tech-benefits", widget: "image" }
+              - { label: "CTA Background", name: "tech-cta", widget: "image" }
+          - label: "Gallery Page"
             name: "gallery"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "gallery-hero", widget: "image", required: false }
-              - { label: "Photo 1", name: "gallery-1", widget: "image", required: false }
-              - { label: "Photo 2", name: "gallery-2", widget: "image", required: false }
-              - { label: "Photo 3", name: "gallery-3", widget: "image", required: false }
-              - { label: "Photo 4", name: "gallery-4", widget: "image", required: false }
-              - { label: "Photo 5", name: "gallery-5", widget: "image", required: false }
-              - { label: "Photo 6", name: "gallery-6", widget: "image", required: false }
-              - { label: "Photo 7", name: "gallery-7", widget: "image", required: false }
-              - { label: "Photo 8", name: "gallery-8", widget: "image", required: false }
-              - { label: "Photo 9", name: "gallery-9", widget: "image", required: false }
-              - { label: "Photo 10", name: "gallery-10", widget: "image", required: false }
-              - { label: "Photo 11", name: "gallery-11", widget: "image", required: false }
-              - { label: "Photo 12", name: "gallery-12", widget: "image", required: false }
-              - { label: "Photo 13", name: "gallery-13", widget: "image", required: false }
-              - { label: "Photo 14", name: "gallery-14", widget: "image", required: false }
-              - { label: "Photo 15", name: "gallery-15", widget: "image", required: false }
-              - { label: "Photo 16", name: "gallery-16", widget: "image", required: false }
-              - { label: "Photo 17", name: "gallery-17", widget: "image", required: false }
-              - { label: "Photo 18", name: "gallery-18", widget: "image", required: false }
-              - { label: "Photo 19", name: "gallery-19", widget: "image", required: false }
-              - { label: "Photo 20", name: "gallery-20", widget: "image", required: false }
-              - { label: "CTA Background", name: "gallery-cta", widget: "image", required: false }
-
-          - label: "FAQ Page Photos"
+              - { label: "Hero Background", name: "gallery-hero", widget: "image" }
+              - { label: "Photo 1", name: "gallery-1", widget: "image" }
+              - { label: "Photo 2", name: "gallery-2", widget: "image" }
+              - { label: "Photo 3", name: "gallery-3", widget: "image" }
+              - { label: "Photo 4", name: "gallery-4", widget: "image" }
+              - { label: "Photo 5", name: "gallery-5", widget: "image" }
+              - { label: "Photo 6", name: "gallery-6", widget: "image" }
+              - { label: "Photo 7", name: "gallery-7", widget: "image" }
+              - { label: "Photo 8", name: "gallery-8", widget: "image" }
+              - { label: "Photo 9", name: "gallery-9", widget: "image" }
+              - { label: "Photo 10", name: "gallery-10", widget: "image" }
+              - { label: "Photo 11", name: "gallery-11", widget: "image" }
+              - { label: "Photo 12", name: "gallery-12", widget: "image" }
+              - { label: "Photo 13", name: "gallery-13", widget: "image" }
+              - { label: "Photo 14", name: "gallery-14", widget: "image" }
+              - { label: "Photo 15", name: "gallery-15", widget: "image" }
+              - { label: "Photo 16", name: "gallery-16", widget: "image" }
+              - { label: "Photo 17", name: "gallery-17", widget: "image" }
+              - { label: "Photo 18", name: "gallery-18", widget: "image" }
+              - { label: "Photo 19", name: "gallery-19", widget: "image" }
+              - { label: "Photo 20", name: "gallery-20", widget: "image" }
+              - { label: "CTA Background", name: "gallery-cta", widget: "image" }
+          - label: "FAQ Page"
             name: "faq"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "faq-hero", widget: "image", required: false }
-              - { label: "CTA Background", name: "faq-cta", widget: "image", required: false }
-
-          - label: "Blog Page Photos"
-            name: "blog"
+              - { label: "Hero Background", name: "faq-hero", widget: "image" }
+              - { label: "CTA Background", name: "faq-cta", widget: "image" }
+          - label: "Blog Page"
+            name: "blogphotos"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "blog-hero", widget: "image", required: false }
-              - { label: "Article 1 Thumbnail", name: "blog-article-1", widget: "image", required: false }
-              - { label: "Article 2 Thumbnail", name: "blog-article-2", widget: "image", required: false }
-              - { label: "Article 3 Thumbnail", name: "blog-article-3", widget: "image", required: false }
-              - { label: "Article 4 Thumbnail", name: "blog-article-4", widget: "image", required: false }
-              - { label: "Article 5 Thumbnail", name: "blog-article-5", widget: "image", required: false }
-              - { label: "Article 6 Thumbnail", name: "blog-article-6", widget: "image", required: false }
-              - { label: "CTA Background", name: "blog-cta", widget: "image", required: false }
-
-          - label: "Contact Page Photos"
+              - { label: "Hero Background", name: "blog-hero", widget: "image" }
+              - { label: "Article 1", name: "blog-article-1", widget: "image" }
+              - { label: "Article 2", name: "blog-article-2", widget: "image" }
+              - { label: "Article 3", name: "blog-article-3", widget: "image" }
+              - { label: "Article 4", name: "blog-article-4", widget: "image" }
+              - { label: "Article 5", name: "blog-article-5", widget: "image" }
+              - { label: "Article 6", name: "blog-article-6", widget: "image" }
+              - { label: "CTA Background", name: "blog-cta", widget: "image" }
+          - label: "Contact Page"
             name: "contact"
             widget: "object"
-            collapsed: true
             fields:
-              - { label: "Hero Background", name: "contact-hero", widget: "image", required: false }
-              - { label: "CTA Background", name: "contact-cta", widget: "image", required: false }
+              - { label: "Hero Background", name: "contact-hero", widget: "image" }
+              - { label: "CTA Background", name: "contact-cta", widget: "image" }
 
   # ═══════════════════════════════════════
   #   BLOG ARTICLES
   # ═══════════════════════════════════════
-  - name: "blog"
+  - name: "blog-articles"
     label: "Blog Articles"
-    description: "Create and edit blog / knowledge base articles"
     folder: "_posts"
     create: true
     slug: "{{slug}}"
@@ -232,7 +203,6 @@ collections:
   # ═══════════════════════════════════════
   - name: "testimonials"
     label: "Testimonials"
-    description: "Manage patient testimonials"
     folder: "_data/testimonials"
     create: true
     slug: "{{name}}"
