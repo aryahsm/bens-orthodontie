@@ -1,0 +1,9 @@
+node_modules/
+ruflo/
+.DS_Store
+Thumbs.db
+.env
+*.log
+.netlify/
+.vercel/
+.claude/

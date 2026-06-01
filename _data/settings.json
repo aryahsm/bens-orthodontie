@@ -1,0 +1,18 @@
+{
+  "practiceName": "Ben's Orthodontie",
+  "taglineEn": "Specialist Orthodontic Care in Antwerpen",
+  "taglineNl": "Specialist Orthodontische Zorg in Antwerpen",
+  "phone": "+32 3 123 45 67",
+  "email": "info@bensorthodontie.be",
+  "whatsapp": "+32412345678",
+  "address": {
+    "street": "Mechelsesteenweg 271",
+    "city": "2018 Antwerpen",
+    "country": "Belgium"
+  },
+  "hours": [
+    { "days": "Monday - Friday", "time": "09:00 - 18:00" },
+    { "days": "Saturday", "time": "09:00 - 14:00" },
+    { "days": "Sunday", "time": "Closed" }
+  ]
+}
