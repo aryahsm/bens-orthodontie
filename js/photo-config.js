@@ -83,8 +83,8 @@ const PHOTO_CONFIG = {
   // ==========================================
   'braces-hero':            'braces-hero-new.png',        // Page hero background
   'braces-intro':           'braces-intro-new.png',       // Intro section image
-  'braces-types':           'equipment-lab.jpg',          // Types of braces image
-  'braces-expect':          'doctor-consulting.jpg',      // What to expect image
+  'braces-types':           'braces-types-new.png',       // Types of braces image
+  'braces-expect':          'braces-expect-new.png',      // What to expect image
   'braces-cta':             'clinic-wide.jpg',            // CTA background
 
   // ==========================================
