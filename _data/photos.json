@@ -12,7 +12,7 @@
   },
   "aligners": {
     "aligners-hero": "/images/clear-aligner-hero.png",
-    "aligners-intro": "/images/doctor-portrait-clinic.jpg",
+    "aligners-intro": "/images/clear-aligner-intro.png",
     "aligners-candidate": "/images/doctor-consulting.jpg",
     "aligners-cta": "/images/clinic-wide.jpg"
   },
