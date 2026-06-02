@@ -81,8 +81,8 @@ const PHOTO_CONFIG = {
   // ==========================================
   //   BRACES PAGE  (braces.html)
   // ==========================================
-  'braces-hero':            'treatment-procedure.jpg',    // Page hero background
-  'braces-intro':           'treatment-room-1.jpg',       // Intro section image
+  'braces-hero':            'braces-hero-new.png',        // Page hero background
+  'braces-intro':           'braces-intro-new.png',       // Intro section image
   'braces-types':           'equipment-lab.jpg',          // Types of braces image
   'braces-expect':          'doctor-consulting.jpg',      // What to expect image
   'braces-cta':             'clinic-wide.jpg',            // CTA background
