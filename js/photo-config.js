@@ -132,7 +132,7 @@ const PHOTO_CONFIG = {
   // ==========================================
   //   BLOG PAGE  (blog.html)
   // ==========================================
-  'blog-hero':              'doctor-scrubs.jpg',          // Page hero background
+  'blog-hero':              'blog-hero-new.jpg',          // Page hero background
   'blog-article-1':         'blog-article-1.jpg',         // Clear Aligners vs Braces (AI minimalist)
   'blog-article-2':         'blog-article-2.jpg',         // Child's First Visit (AI minimalist)
   'blog-article-3':         'blog-article-3.jpg',         // 3D Scanning Technology (AI minimalist)
