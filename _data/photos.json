@@ -73,11 +73,11 @@
     "faq-cta": "/images/clinic-wide.jpg"
   },
   "treatments": {
-    "treatments-hero": "/images/treatment-procedure.jpg",
-    "treatments-aligners": "/images/doctor-scrubs.jpg",
-    "treatments-braces": "/images/treatment-room-1.jpg",
-    "treatments-lingual": "/images/clinic-detail-1.jpg",
-    "treatments-retainers": "/images/clinic-detail-3.jpg",
+    "treatments-hero": "/images/treatments-hero-new.jpg",
+    "treatments-aligners": "/images/treatments-aligners-new.jpg",
+    "treatments-braces": "/images/treatments-braces-new.jpg",
+    "treatments-lingual": "/images/treatments-lingual-new.jpg",
+    "treatments-retainers": "/images/treatments-retainers-new.jpg",
     "treatments-cta": "/images/clinic-wide.jpg"
   },
   "team": {

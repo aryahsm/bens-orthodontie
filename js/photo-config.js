@@ -63,11 +63,11 @@ const PHOTO_CONFIG = {
   // ==========================================
   //   TREATMENTS PAGE  (treatments.html)
   // ==========================================
-  'treatments-hero':        'treatment-procedure.jpg',    // Page hero background
-  'treatments-aligners':    'doctor-scrubs.jpg',          // Clear aligners section image
-  'treatments-braces':      'treatment-room-1.jpg',       // Braces section image
-  'treatments-lingual':     'clinic-detail-1.jpg',        // Lingual braces section image
-  'treatments-retainers':   'clinic-detail-3.jpg',        // Retainers section image
+  'treatments-hero':        'treatments-hero-new.jpg',    // Page hero (AI minimalist)
+  'treatments-aligners':    'treatments-aligners-new.jpg',// Clear aligners section (AI minimalist)
+  'treatments-braces':      'treatments-braces-new.jpg',  // Braces section (AI minimalist)
+  'treatments-lingual':     'treatments-lingual-new.jpg', // Lingual braces section (AI minimalist)
+  'treatments-retainers':   'treatments-retainers-new.jpg', // Retainers section (AI minimalist)
   'treatments-cta':         'clinic-wide.jpg',            // CTA background
 
   // ==========================================
