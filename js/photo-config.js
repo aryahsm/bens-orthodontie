@@ -144,7 +144,7 @@ const PHOTO_CONFIG = {
   // ==========================================
   //   CONTACT PAGE  (contact.html)
   // ==========================================
-  'contact-hero':           'clinic-interior-1.jpg',      // Page hero background
+  'contact-hero':           'contact-hero-new.jpg',       // Page hero background
   'contact-cta':            'clinic-wide.jpg',            // CTA background
 };
 
