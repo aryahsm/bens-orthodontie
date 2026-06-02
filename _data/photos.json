@@ -18,12 +18,12 @@
   },
   "blogphotos": {
     "blog-hero": "/images/doctor-scrubs.jpg",
-    "blog-article-1": "/images/clinic-detail-1.jpg",
-    "blog-article-2": "/images/treatment-procedure.jpg",
-    "blog-article-3": "/images/doctor-consulting.jpg",
-    "blog-article-4": "/images/clinic-detail-3.jpg",
-    "blog-article-5": "/images/doctor-portrait-clinic.jpg",
-    "blog-article-6": "/images/equipment-lab.jpg",
+    "blog-article-1": "/images/blog-article-1.jpg",
+    "blog-article-2": "/images/blog-article-2.jpg",
+    "blog-article-3": "/images/blog-article-3.jpg",
+    "blog-article-4": "/images/blog-article-4.jpg",
+    "blog-article-5": "/images/blog-article-5.jpg",
+    "blog-article-6": "/images/blog-article-6.jpg",
     "blog-cta": "/images/clinic-wide.jpg"
   },
   "technology": {

@@ -133,12 +133,12 @@ const PHOTO_CONFIG = {
   //   BLOG PAGE  (blog.html)
   // ==========================================
   'blog-hero':              'doctor-scrubs.jpg',          // Page hero background
-  'blog-article-1':         'clinic-detail-1.jpg',        // Article 1 thumbnail
-  'blog-article-2':         'treatment-procedure.jpg',    // Article 2 thumbnail
-  'blog-article-3':         'doctor-consulting.jpg',      // Article 3 thumbnail
-  'blog-article-4':         'clinic-detail-3.jpg',        // Article 4 thumbnail
-  'blog-article-5':         'doctor-portrait-clinic.jpg', // Article 5 thumbnail
-  'blog-article-6':         'equipment-lab.jpg',          // Article 6 thumbnail
+  'blog-article-1':         'blog-article-1.jpg',         // Clear Aligners vs Braces (AI minimalist)
+  'blog-article-2':         'blog-article-2.jpg',         // Child's First Visit (AI minimalist)
+  'blog-article-3':         'blog-article-3.jpg',         // 3D Scanning Technology (AI minimalist)
+  'blog-article-4':         'blog-article-4.jpg',         // Why Retainers Matter (AI minimalist)
+  'blog-article-5':         'blog-article-5.jpg',         // Adult Orthodontics (AI minimalist)
+  'blog-article-6':         'blog-article-6.jpg',         // Oral Hygiene with Braces (AI minimalist)
   'blog-cta':               'clinic-wide.jpg',            // CTA background
 
   // ==========================================
