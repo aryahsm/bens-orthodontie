@@ -73,7 +73,7 @@ const PHOTO_CONFIG = {
   // ==========================================
   //   CLEAR ALIGNERS PAGE  (clear-aligners.html)
   // ==========================================
-  'aligners-hero':          'doctor-scrubs.jpg',          // Page hero background
+  'aligners-hero':          'clear-aligner-hero.png',     // Page hero background
   'aligners-intro':         'doctor-portrait-clinic.jpg', // Intro section image
   'aligners-candidate':     'doctor-consulting.jpg',      // "Is it right for you" image
   'aligners-cta':           'clinic-wide.jpg',            // CTA background
