@@ -83,10 +83,10 @@
   "team": {
     "team-hero": "/images/team-photo.jpg",
     "team-dr-hesami": "/images/doctor-portrait-studio.jpg",
-    "team-dr-kassem": "/images/doctors-duo.jpg",
-    "team-naual": "/images/team-member-1.jpg",
-    "team-evy": "/images/team-member-2.jpg",
-    "team-shreya": "/images/team-member-1.jpg",
+    "team-dr-kassem": "/images/dr-kassem-portrait.jpg",
+    "team-naual": "/images/naual-portrait.jpg",
+    "team-evy": "/images/evy-portrait.jpg",
+    "team-shreya": "/images/shreya-portrait.jpg",
     "team-group": "/images/team-group-2.jpg",
     "team-cta": "/images/clinic-wide.jpg"
   },

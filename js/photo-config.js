@@ -53,10 +53,10 @@ const PHOTO_CONFIG = {
   // ==========================================
   'team-hero':              'team-photo.jpg',             // Page hero - team group photo
   'team-dr-hesami':         'doctor-portrait-studio.jpg', // Dr. Hesami featured photo
-  'team-dr-kassem':         'doctors-duo.jpg',            // Dr. Kassem featured photo
-  'team-naual':             'team-member-1.jpg',          // Naual Abbou card photo
-  'team-evy':               'team-member-2.jpg',          // Evy Moller card photo
-  'team-shreya':            'team-member-1.jpg',          // Shreya Kansara card photo
+  'team-dr-kassem':         'dr-kassem-portrait.jpg',     // Dr. Kassem featured photo
+  'team-naual':             'naual-portrait.jpg',         // Naual Abbou card photo
+  'team-evy':               'evy-portrait.jpg',           // Evy Moller card photo
+  'team-shreya':            'shreya-portrait.jpg',        // Shreya Kansara card photo
   'team-group':             'team-group-2.jpg',           // Full team photo section
   'team-cta':               'clinic-wide.jpg',            // CTA background
 
