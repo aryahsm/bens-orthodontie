@@ -101,11 +101,11 @@ const PHOTO_CONFIG = {
   //   GALLERY PAGE  (gallery.html)
   // ==========================================
   'gallery-hero':           'clinic-interior-1.jpg',      // Page hero background
-  'gallery-1':              'clinic-interior-1.jpg',      // Gallery item 1
-  'gallery-2':              'doctor-portrait-studio.jpg', // Gallery item 2
-  'gallery-3':              'treatment-room-1.jpg',       // Gallery item 3
-  'gallery-4':              'clinic-detail-1.jpg',        // Gallery item 4
-  'gallery-5':              'doctors-duo.jpg',            // Gallery item 5
+  'gallery-1':              'equipment-1-3dprinter.jpg',  // Medical Equipment - 3D printer
+  'gallery-2':              'equipment-2-retainer.jpg',   // Medical Equipment - Retainer
+  'gallery-3':              'equipment-3-machine.jpg',    // Medical Equipment - Aligner machine
+  'gallery-4':              'equipment-4-xray.jpg',       // Medical Equipment - CBCT X-ray
+  'gallery-5':              'equipment-5-lab.jpg',        // Medical Equipment - Lab workstation
   'gallery-6':              'clinic-interior-2.jpg',      // Gallery item 6
   'gallery-7':              'equipment-lab.jpg',          // Gallery item 7
   'gallery-8':              'team-member-1.jpg',          // Gallery item 8
