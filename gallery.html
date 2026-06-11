@@ -42,7 +42,7 @@
   <!-- GALLERY FILTERS -->
   <section class="section">
     <div class="container">
-      <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 50px; flex-wrap: wrap;" class="reveal">
+      <div style="display: none; justify-content: center; gap: 12px; margin-bottom: 50px; flex-wrap: wrap;" class="reveal">
         <button class="btn btn-primary gallery-filter-btn active" data-filter="all" style="padding: 10px 24px; font-size: 0.72rem;">
           <span data-lang-en>All</span><span data-lang-nl>Alles</span>
         </button>
@@ -60,88 +60,19 @@
         </button>
       </div>
 
-      <!-- GALLERY GRID -->
-      <div class="gallery-grid reveal">
-        <div class="gallery-item featured" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/hero-reception.jpg" alt="Clinic reception area">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/clinic-interior-1.jpg" alt="Clinic interior">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/clinic-interior-2.jpg" alt="Clinic waiting area">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/clinic-interior-3.jpg" alt="Clinic details">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="team">
-          <img data-photo="gallery-hero" src="images/doctor-portrait-studio.jpg" alt="Dr. Behnam Hesami">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item wide" data-category="team">
-          <img data-photo="gallery-hero" src="images/team-photo.jpg" alt="Ben's Orthodontie team">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="team">
-          <img data-photo="gallery-hero" src="images/doctor-portrait-clinic.jpg" alt="Dr. Hesami in clinic">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="treatment">
-          <img data-photo="gallery-hero" src="images/treatment-procedure.jpg" alt="Orthodontic treatment">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="treatment">
-          <img data-photo="gallery-hero" src="images/doctor-scrubs.jpg" alt="Dr. Hesami at work">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="technology">
-          <img data-photo="gallery-hero" src="images/doctor-consulting.jpg" alt="3D imaging consultation">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="technology">
-          <img data-photo="gallery-hero" src="images/equipment-lab.jpg" alt="Orthodontic lab equipment">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/clinic-detail-1.jpg" alt="Clinic atmosphere">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/clinic-detail-2.jpg" alt="Treatment room">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="team">
-          <img data-photo="gallery-hero" src="images/team-member-1.jpg" alt="Team member">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/gallery-1.jpg" alt="Gallery photo">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="treatment">
-          <img data-photo="gallery-hero" src="images/gallery-2.jpg" alt="Gallery photo">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/gallery-3.jpg" alt="Gallery photo">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="treatment">
-          <img data-photo="gallery-hero" src="images/gallery-4.jpg" alt="Gallery photo">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="technology">
-          <img data-photo="gallery-hero" src="images/gallery-5.jpg" alt="Gallery photo">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
-        <div class="gallery-item" data-category="clinic">
-          <img data-photo="gallery-hero" src="images/gallery-6.jpg" alt="Gallery photo">
-          <div class="gallery-item-overlay"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
-        </div>
+      <!-- GALLERY GRID (empty - photos coming soon) -->
+      <div class="gallery-empty reveal" style="text-align: center; padding: 80px 20px; max-width: 600px; margin: 0 auto;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1" style="width: 64px; height: 64px; opacity: 0.4; margin-bottom: 24px;">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; color: var(--text-primary);">
+          <span data-lang-en>Gallery Coming Soon</span><span data-lang-nl>Galerij Binnenkort Beschikbaar</span>
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
+          <span data-lang-en>We're curating a beautiful selection of photos from our clinic, team and treatments. Please check back soon.</span><span data-lang-nl>We zijn een mooie selectie foto's aan het samenstellen van onze kliniek, ons team en onze behandelingen. Kom binnenkort terug.</span>
+        </p>
       </div>
     </div>
   </section>
