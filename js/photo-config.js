@@ -21,7 +21,7 @@ const PHOTO_CONFIG = {
   // ==========================================
   //   HOME PAGE  (index.html)
   // ==========================================
-  'home-hero':              'hero-mother-child.jpg',      // Main hero background image
+  'home-hero':              'home-hero-hesami.jpg',       // Main hero background image
   'home-service-1':         'clinic-detail-2.jpg',        // Clear Aligners service card
   'home-service-2':         'treatment-room-1.jpg',       // Traditional Braces service card
   'home-service-3':         'clinic-detail-1.jpg',        // Lingual Braces service card
