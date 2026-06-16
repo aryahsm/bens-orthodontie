@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Editor — Ben's Orthodontie</title>
+<style>
+  :root{
+    --bg:#FAFAF7; --card:#fff; --blue:#2C5F7A; --blue-light:#A8C8DA;
+    --warm:#8B6E52; --text:#2b2b2b; --muted:#7a7a7a; --line:#e8e6e0; --ok:#3a9d5d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);padding:0 0 80px}
+  header{background:var(--blue);color:#fff;padding:28px 32px;position:sticky;top:0;z-index:20;box-shadow:0 2px 18px rgba(0,0,0,.12)}
+  header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.01em}
+  header p{opacity:.85;font-size:.9rem;margin-top:4px}
+  .bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}
+  button{font-family:inherit;cursor:pointer;border:none;border-radius:30px;font-weight:600;font-size:.85rem;padding:12px 24px;transition:.15s}
+  .btn-main{background:#fff;color:var(--blue)}
+  .btn-main:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+  .btn-deploy{background:var(--blue-light);color:var(--blue)}
+  .btn-deploy:hover{background:#fff}
+  .status{font-size:.85rem;opacity:.9}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .intro{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 28px;margin:28px auto;max-width:820px}
+  .intro h2{font-size:1.1rem;margin-bottom:10px;color:var(--blue)}
+  .intro ol{margin-left:18px;line-height:1.9;font-size:.92rem;color:#444}
+  .intro b{color:var(--blue)}
+  .group{margin:36px 0 8px}
+  .group h3{font-size:1.15rem;color:var(--warm);border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:20px;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+  .slot{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s}
+  .slot:hover{box-shadow:0 6px 22px rgba(0,0,0,.08)}
+  .thumb{position:relative;width:100%;aspect-ratio:4/3;background:#f0eee9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="%23ccc" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>') center/40px no-repeat;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .drop{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:rgba(44,95,122,.0);opacity:0;transition:.15s;color:#fff;font-size:.8rem;font-weight:600;text-align:center;padding:10px}
+  .slot:hover .drop{opacity:1;background:rgba(44,95,122,.55)}
+  .drop svg{width:26px;height:26px}
+  .slot.dragover .drop{opacity:1;background:rgba(58,157,93,.7)}
+  .slot.saved .drop{opacity:1;background:rgba(58,157,93,.75)}
+  .meta{padding:11px 13px}
+  .meta .label{font-size:.85rem;font-weight:600;line-height:1.3}
+  .meta .file{font-size:.7rem;color:var(--muted);margin-top:3px;word-break:break-all}
+  .gate{max-width:560px;margin:80px auto;text-align:center;padding:40px;background:#fff;border:1px solid var(--line);border-radius:20px}
+  .gate svg{width:54px;height:54px;color:var(--blue);margin-bottom:18px}
+  .gate h2{font-size:1.4rem;margin-bottom:10px}
+  .gate p{color:var(--muted);line-height:1.6;margin-bottom:24px;font-size:.95rem}
+  .gate button{background:var(--blue);color:#fff;font-size:.95rem;padding:14px 30px}
+  .hidden{display:none}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;padding:14px 26px;border-radius:30px;font-size:.9rem;font-weight:600;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transition:.25s;z-index:50}
+  .toast.show{opacity:1}
+  .toast.ok{background:var(--ok)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>📸 Photo Editor — Ben's Orthodontie</h1>
+    <p>Drag a new photo onto any image to replace it. Changes save instantly to your computer.</p>
+    <div class="bar" id="bar" style="display:none">
+      <button class="btn-deploy" id="deployBtn">🚀 Push Live (after editing)</button>
+      <span class="status" id="status">Connected ✓</span>
+    </div>
+  </div>
+</header>
+
+<!-- CONNECT GATE -->
+<div class="gate" id="gate">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+  <h2>Connect your website folder</h2>
+  <p>Click below and select the <b>"New folder"</b> folder (your website project). This lets the editor save photos directly. You only do this once per session.</p>
+  <button id="connectBtn">Connect Folder</button>
+  <p style="margin-top:18px;font-size:.8rem;color:#aaa">Works in Chrome &amp; Edge. Your files never leave your computer.</p>
+</div>
+
+<!-- EDITOR -->
+<div class="wrap hidden" id="editor"></div>
+
+<div class="intro hidden" id="introBox">
+  <h2>How to use</h2>
+  <ol>
+    <li><b>Hover</b> over any photo and <b>drag a new image</b> onto it (or click it to browse).</li>
+    <li>The photo <b>saves instantly</b> — refresh your website tab to see it.</li>
+    <li>When you're done, click <b>🚀 Push Live</b> at the top, then double-click <b>deploy.bat</b> to publish online.</li>
+  </ol>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ---- Friendly labels for every photo slot ----
+const LABELS = {
+  // HOME
+  "home-hero":"Home — Hero Background","home-service-1":"Home — Clear Aligners Card","home-service-2":"Home — Braces Card","home-service-3":"Home — Lingual Braces Card","home-service-4":"Home — Retainers Card","home-service-5":"Home — 3D Scanning Card","home-service-6":"Home — 3D Printing Card","home-about":"Home — About (Doctor)","home-tech":"Home — Technology Preview","home-team-1":"Home — Team: Dr. Hesami","home-team-2":"Home — Team: Dr. Kassem","home-team-3":"Home — Team: Naual","home-team-4":"Home — Team: Evy","home-cta":"Home — CTA Background",
+  // ABOUT
+  "about-hero":"About — Hero","about-story":"About — Our Story (Dr. Hesami)","about-philosophy":"About — Philosophy","about-gallery-1":"About — Gallery 1","about-gallery-2":"About — Gallery 2","about-gallery-3":"About — Gallery 3","about-gallery-4":"About — Gallery 4","about-cta":"About — CTA",
+  // TEAM
+  "team-hero":"Team — Hero","team-dr-hesami":"Team — Dr. Hesami","team-dr-kassem":"Team — Dr. Kassem","team-naual":"Team — Naual Abbou","team-evy":"Team — Evy Møller","team-shreya":"Team — Shreya Kansara","team-group":"Team — Group Photo","team-cta":"Team — CTA",
+  // TREATMENTS
+  "treatments-hero":"Treatments — Hero","treatments-aligners":"Treatments — Clear Aligners","treatments-braces":"Treatments — Braces","treatments-lingual":"Treatments — Lingual Braces","treatments-retainers":"Treatments — Retainers","treatments-cta":"Treatments — CTA",
+  // ALIGNERS
+  "aligners-hero":"Clear Aligners — Hero","aligners-intro":"Clear Aligners — Intro","aligners-candidate":"Clear Aligners — Candidate","aligners-cta":"Clear Aligners — CTA",
+  // BRACES
+  "braces-hero":"Braces — Hero","braces-intro":"Braces — Intro","braces-types":"Braces — Types","braces-expect":"Braces — What to Expect","braces-cta":"Braces — CTA",
+  // TECHNOLOGY
+  "tech-hero":"Technology — Hero","tech-scanning":"Technology — 3D Scanning","tech-planning":"Technology — Planning","tech-printing":"Technology — 3D Printing","tech-benefits":"Technology — Benefits","tech-cta":"Technology — CTA",
+  // GALLERY
+  "gallery-hero":"Gallery — Hero","gallery-cta":"Gallery — CTA",
+  "gallery-1":"Gallery — Photo 1","gallery-2":"Gallery — Photo 2","gallery-3":"Gallery — Photo 3","gallery-4":"Gallery — Photo 4","gallery-5":"Gallery — Photo 5","gallery-6":"Gallery — Photo 6","gallery-7":"Gallery — Photo 7","gallery-8":"Gallery — Photo 8","gallery-9":"Gallery — Photo 9","gallery-10":"Gallery — Photo 10","gallery-11":"Gallery — Photo 11","gallery-12":"Gallery — Photo 12","gallery-13":"Gallery — Photo 13","gallery-14":"Gallery — Photo 14","gallery-15":"Gallery — Photo 15","gallery-16":"Gallery — Photo 16","gallery-17":"Gallery — Photo 17","gallery-18":"Gallery — Photo 18","gallery-19":"Gallery — Photo 19","gallery-20":"Gallery — Photo 20",
+  // FAQ
+  "faq-hero":"FAQ — Hero","faq-cta":"FAQ — CTA",
+  // BLOG
+  "blog-hero":"Knowledge — Hero","blog-article-1":"Knowledge — Article 1","blog-article-2":"Knowledge — Article 2","blog-article-3":"Knowledge — Article 3","blog-article-4":"Knowledge — Article 4","blog-article-5":"Knowledge — Article 5","blog-article-6":"Knowledge — Article 6","blog-cta":"Knowledge — CTA",
+  // CONTACT
+  "contact-hero":"Contact — Hero","contact-cta":"Contact — CTA"
+};
+const SECTION_TITLES = {home:"🏠 Home Page",about:"ℹ️ About Page",team:"👥 Team Page",treatments:"🦷 Treatments Page",aligners:"✨ Clear Aligners Page",braces:"🪥 Braces Page",technology:"💻 Technology Page",gallery:"🖼️ Gallery Page",faq:"❓ FAQ Page",blogphotos:"📰 Knowledge / Blog Page",contact:"📞 Contact Page"};
+const SECTION_ORDER = ["home","about","team","treatments","aligners","braces","technology","gallery","blogphotos","faq","contact"];
+
+let rootHandle=null, imagesHandle=null, photosFileHandle=null, config=null;
+
+const $=s=>document.querySelector(s);
+function toast(msg,ok){const t=$('#toast');t.textContent=msg;t.className='toast show'+(ok?' ok':'');setTimeout(()=>t.className='toast',2200);}
+
+$('#connectBtn').onclick=async()=>{
+  try{
+    rootHandle=await window.showDirectoryPicker({mode:'readwrite'});
+    imagesHandle=await rootHandle.getDirectoryHandle('images');
+    const dataHandle=await rootHandle.getDirectoryHandle('_data');
+    photosFileHandle=await dataHandle.getFileHandle('photos.json');
+    const f=await photosFileHandle.getFile();
+    config=JSON.parse(await f.text());
+    $('#gate').classList.add('hidden');
+    $('#editor').classList.remove('hidden');
+    $('#introBox').classList.remove('hidden');
+    $('#bar').style.display='flex';
+    await render();
+  }catch(e){
+    if(e.name!=='AbortError') toast('Could not open folder: '+e.message);
+  }
+};
+
+async function thumbURL(path){
+  try{
+    const name=path.replace('/images/','').replace('images/','');
+    const fh=await imagesHandle.getFileHandle(name);
+    const file=await fh.getFile();
+    return URL.createObjectURL(file);
+  }catch{return null;}
+}
+
+async function render(){
+  const ed=$('#editor');ed.innerHTML='';
+  for(const sec of SECTION_ORDER){
+    if(!config[sec])continue;
+    const group=document.createElement('div');group.className='group';
+    group.innerHTML=`<h3>${SECTION_TITLES[sec]||sec}</h3>`;
+    const grid=document.createElement('div');grid.className='grid';
+    for(const key of Object.keys(config[sec])){
+      const path=config[sec][key];
+      const label=LABELS[key]||key;
+      const slot=document.createElement('div');slot.className='slot';
+      slot.innerHTML=`
+        <div class="thumb" data-sec="${sec}" data-key="${key}">
+          <div class="drop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><span>Drop or click to replace</span></div>
+        </div>
+        <div class="meta"><div class="label">${label}</div><div class="file">${path.split('/').pop()}</div></div>`;
+      grid.appendChild(slot);
+      const thumb=slot.querySelector('.thumb');
+      const url=await thumbURL(path);
+      if(url){const img=document.createElement('img');img.src=url;thumb.insertBefore(img,thumb.firstChild);}
+      wireSlot(thumb,sec,key,slot);
+    }
+    group.appendChild(grid);ed.appendChild(group);
+  }
+}
+
+function wireSlot(thumb,sec,key,slot){
+  thumb.onclick=()=>{const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.onchange=()=>inp.files[0]&&replacePhoto(sec,key,inp.files[0],thumb,slot);inp.click();};
+  thumb.ondragover=e=>{e.preventDefault();slot.classList.add('dragover');};
+  thumb.ondragleave=()=>slot.classList.remove('dragover');
+  thumb.ondrop=e=>{e.preventDefault();slot.classList.remove('dragover');const file=[...e.dataTransfer.files].find(f=>f.type.startsWith('image/'));if(file)replacePhoto(sec,key,file,thumb,slot);};
+}
+
+async function replacePhoto(sec,key,file,thumb,slot){
+  try{
+    const ext=(file.name.split('.').pop()||'jpg').toLowerCase();
+    const newName=`${key}-${Date.now()}.${ext}`;
+    const buf=await file.arrayBuffer();
+    const fh=await imagesHandle.getFileHandle(newName,{create:true});
+    const w=await fh.createWritable();await w.write(buf);await w.close();
+    // update config + write photos.json
+    config[sec][key]=`/images/${newName}`;
+    const pw=await photosFileHandle.createWritable();
+    await pw.write(JSON.stringify(config,null,2));await pw.close();
+    // update thumbnail
+    let img=thumb.querySelector('img');
+    if(!img){img=document.createElement('img');thumb.insertBefore(img,thumb.firstChild);}
+    img.src=URL.createObjectURL(file);
+    slot.querySelector('.file').textContent=newName;
+    slot.classList.add('saved');setTimeout(()=>slot.classList.remove('saved'),1200);
+    toast('Saved ✓  '+(LABELS[key]||key),true);
+  }catch(e){toast('Error: '+e.message);}
+}
+
+$('#deployBtn').onclick=()=>{
+  toast('To publish: double-click deploy.bat in your folder');
+  alert("To publish your changes online:\n\n1. Open your \"New folder\" project folder\n2. Double-click the file named  deploy.bat\n3. Wait ~1 minute — your live site updates automatically!\n\n(Or just tell Claude \"deploy\" in the chat.)");
+};
+</script>
+</body>
+</html>
