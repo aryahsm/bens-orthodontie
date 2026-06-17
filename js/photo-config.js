@@ -40,7 +40,7 @@ const PHOTO_CONFIG = {
   //   ABOUT PAGE  (about.html)
   // ==========================================
   'about-hero':             'about-hero-desk.jpg',        // Page hero background
-  'about-story':            'dr-hesami-about.jpg',        // Our story section image
+  'about-story':            'about-story-400.jpg',        // Our story section image
   'about-philosophy':       'about-philosophy-new.png',   // Philosophy section image
   'about-gallery-1':        'clinic-interior-1.jpg',      // Clinic gallery photo 1
   'about-gallery-2':        'treatment-room-1.jpg',       // Clinic gallery photo 2
