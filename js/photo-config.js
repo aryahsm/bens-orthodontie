@@ -29,7 +29,7 @@ const PHOTO_CONFIG = {
   'home-service-5':         'doctor-consulting.jpg',      // 3D Scanning service card
   'home-service-6':         'equipment-lab.jpg',          // 3D Printing service card
   'home-about':             'home-about-seated.jpg',      // About section - doctor photo
-  'home-tech':              'doctor-consulting.jpg',      // Technology preview
+  'home-tech':              'home-tech-sim.jpg',          // Technology preview
   'home-team-1':            'doctor-portrait-studio.jpg', // Team card - Dr. Hesami
   'home-team-2':            'doctors-duo.jpg',            // Team card - Dr. Kassem
   'home-team-3':            'team-member-1.jpg',          // Team card - Naual
